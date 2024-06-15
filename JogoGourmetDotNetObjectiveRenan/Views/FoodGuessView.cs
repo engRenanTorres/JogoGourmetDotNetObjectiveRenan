@@ -22,21 +22,61 @@ namespace JogoGourmetDotNetObjectiveRenan.View
         {
             yesButton.Click += delegate { FoodGuessed?.Invoke(this, EventArgs.Empty); };
             noButton.Click += delegate { NewGuess?.Invoke(this, EventArgs.Empty); };
+            initButton.Click += delegate { InitGame?.Invoke(this, EventArgs.Empty); };
         } 
 
-        public string GuessText { get => "A comida escolhida é " + FoodName; }
+        public string? GuessText { get; set; }
 
-        public bool IsSuccessful { get; set; }
-        public string Message { get; set; }
-        public string FoodName { get ; set; }
+        public bool IsFinished { get; set; }
+        public string? TipText { get ; set; }
+        public int TipIndexInUse { get; set; }
 
         public event EventHandler FoodGuessed;
         public event EventHandler NewGuess;
+        public event EventHandler InitGame;
 
-        public void SetFoodGuessBindingSource(string newName)//BindingSource food)
+        public void SetNewTip(string newName)//BindingSource food)
         {
-            FoodName = newName;
-            mainLabel.Text = GuessText;
+            GuessText = null;
+            TipText = "A comida escolhida é " + newName + "?";
+            tipLabel.Visible = true;
+            guessLabel.Visible = false;
+            tipLabel.Text = TipText;
+        }
+
+        public void SetNewGuess(string newGuess)
+        {
+            TipText = null;
+            GuessText = "A comida escolhida foi " + newGuess + "?";
+            tipLabel.Visible = false;
+            guessLabel.Visible = true;
+            guessLabel.Text = GuessText;
+        }
+
+        public void ShowFinishMessage(bool userWon)
+        {
+            tipLabel.Text = 
+                userWon? 
+                "Ok, eu desisto! Não tenho mais palpites. =(":
+                "Eu sempre adivinho! =D";
+            tipLabel.Visible = true;
+            InitView();
+        }
+
+        public void RestartView()
+        {
+            guessLabel.Visible = false;
+            yesButton.Visible = true;
+            noButton.Visible= true;
+            initButton.Visible = false;
+        }
+
+        public void InitView()
+        {
+            guessLabel.Visible = false;
+            yesButton.Visible = false;
+            noButton.Visible = false;
+            initButton.Visible = true;
         }
 
     }

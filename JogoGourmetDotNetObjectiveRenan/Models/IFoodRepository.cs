@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace JogoGourmetDotNetObjectiveRenan.Model
 {
-    public interface IGuessRepository
+    public interface IFoodRepository
     {
         FoodGuess Get(int id);
-        FoodGuess GetBySimilarityTips(IEnumerable<Tip> gameTips);
+        FoodGuess GetBySimilarityTips(IEnumerable<int> gameTips);
         IEnumerable<FoodGuess> GetAll();
     }
 }

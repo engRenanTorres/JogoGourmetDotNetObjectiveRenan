@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            mainLabel = new Label();
+            tipLabel = new Label();
             yesButton = new Button();
             noButton = new Button();
+            initButton = new Button();
+            guessLabel = new Label();
             SuspendLayout();
             // 
-            // mainLabel
+            // tipLabel
             // 
-            mainLabel.AutoSize = true;
-            mainLabel.Location = new Point(133, 34);
-            mainLabel.Name = "mainLabel";
-            mainLabel.Size = new Size(293, 20);
-            mainLabel.TabIndex = 0;
-            mainLabel.Text = "Quer jogar? Se sim, Imagine uma COMIDA.";
+            tipLabel.AutoSize = true;
+            tipLabel.Location = new Point(133, 34);
+            tipLabel.Name = "tipLabel";
+            tipLabel.Size = new Size(293, 20);
+            tipLabel.TabIndex = 0;
+            tipLabel.Text = "Quer jogar? Se sim, Imagine uma COMIDA.";
             // 
             // yesButton
             // 
@@ -60,15 +62,35 @@
             noButton.Text = "Não";
             noButton.UseVisualStyleBackColor = true;
             // 
-            // FoodGuess
+            // initButton
+            // 
+            initButton.Location = new Point(226, 102);
+            initButton.Name = "initButton";
+            initButton.Size = new Size(94, 29);
+            initButton.TabIndex = 3;
+            initButton.Text = "Iniciar";
+            initButton.UseVisualStyleBackColor = true;
+            // 
+            // guessLabel
+            // 
+            guessLabel.AutoSize = true;
+            guessLabel.Location = new Point(133, 54);
+            guessLabel.Name = "guessLabel";
+            guessLabel.Size = new Size(50, 20);
+            guessLabel.TabIndex = 4;
+            guessLabel.Text = "label1";
+            // 
+            // FoodGuessView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(572, 167);
+            Controls.Add(guessLabel);
+            Controls.Add(initButton);
             Controls.Add(noButton);
             Controls.Add(yesButton);
-            Controls.Add(mainLabel);
-            Name = "FoodGuess";
+            Controls.Add(tipLabel);
+            Name = "FoodGuessView";
             Text = "FoodGuess";
             ResumeLayout(false);
             PerformLayout();
@@ -76,8 +98,10 @@
 
         #endregion
 
-        private Label mainLabel;
+        private Label tipLabel;
         private Button yesButton;
         private Button noButton;
+        private Button initButton;
+        private Label guessLabel;
     }
 }

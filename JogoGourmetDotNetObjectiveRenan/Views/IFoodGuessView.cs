@@ -10,16 +10,23 @@ namespace JogoGourmetDotNetObjectiveRenan.View
     public interface IFoodGuessView
     {
         string GuessText { get; }
-        string FoodName { get; set; }
+        string TipText { get; set; }
+        int TipIndexInUse { get; set; }
 
-        bool IsSuccessful {  get; set; }
-        string Message { get; }
+        bool IsFinished {  get; set; }
 
         event EventHandler FoodGuessed;
         event EventHandler NewGuess;
+        public event EventHandler InitGame;
 
-        void SetFoodGuessBindingSource(string newName);//BindingSource foodList);
+        void SetNewTip(string newName);//BindingSource foodList);
+        void SetNewGuess(string newGuess);
         void Show();
+
+        void ShowFinishMessage(bool usersWon);
+        void RestartView();
+
+        void InitView();
 
     }
 }

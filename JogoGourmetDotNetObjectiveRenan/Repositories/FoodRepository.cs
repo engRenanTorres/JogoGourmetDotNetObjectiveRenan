@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace JogoGourmetDotNetObjectiveRenan.Repository
 {
-    public class FoodRepository : IGuessRepository
+    public class FoodRepository : IFoodRepository
     {
 
         public List<FoodGuess> FoodGuesses { get; set; }
@@ -34,9 +34,21 @@ namespace JogoGourmetDotNetObjectiveRenan.Repository
             return FoodGuesses;
         }
 
-        public FoodGuess GetBySimilarityTips(IEnumerable<Tip> gameTips)
+        public FoodGuess? GetBySimilarityTips(IEnumerable<int> gameTips)
         {
-            return FoodGuesses.Last();
+            if (gameTips == null || !gameTips.Any())
+            {
+                return null; // Handle empty or null input gracefully
+            }
+
+            // Efficiently convert gameTips to a HashSet for faster lookups
+            var gameTipsSet = new HashSet<int>(gameTips);
+
+            // Find FoodGuesses with the highest number of matching tips
+            var maxMatchingTips = FoodGuesses.Max(fg => gameTipsSet.Intersect(fg.Tips).Count());
+
+            return FoodGuesses.Where(fg => gameTipsSet.Intersect(fg.Tips).Count() == maxMatchingTips)
+                              .First();
         }
     }
 }

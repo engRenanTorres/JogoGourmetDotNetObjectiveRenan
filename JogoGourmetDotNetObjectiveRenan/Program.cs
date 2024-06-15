@@ -2,6 +2,7 @@ using JogoGourmetDotNetObjectiveRenan.View;
 using JogoGourmetDotNetObjectiveRenan.Model;
 using JogoGourmetDotNetObjectiveRenan.Presenter;
 using JogoGourmetDotNetObjectiveRenan.Repository;
+using JogoGourmetDotNetObjectiveRenan.Models;
 
 namespace JogoGourmetDotNetObjectiveRenan
 {
@@ -17,8 +18,9 @@ namespace JogoGourmetDotNetObjectiveRenan
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             IFoodGuessView view = new FoodGuessView();
-            IGuessRepository repository = new FoodRepository();
-            new FoodGuessPresenter(view, repository);
+            IFoodRepository repository = new FoodRepository();
+            ITipsRepository tipsRepository = new TipsRepository();
+            new FoodGuessPresenter(view, repository,tipsRepository);
             Application.Run((Form)view);
         }
     }
