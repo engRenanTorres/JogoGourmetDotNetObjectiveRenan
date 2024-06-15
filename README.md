@@ -28,7 +28,12 @@ O projeto segue o padrão de design MVP, que separa a lógica de negócios, a in
 - **Presenter**: Camada intermediária que manipula a lógica de interação entre a Model e a View.
 
 ## Excutável do Projeto
-  disponível em https://www.dropbox.com/scl/fo/i9zaiwnmi9j8yz5vxpi0r/APH73BsF6Ns9h1xen7kPapM?rlkey=z10tnpn0ds206e29c1rz9k57m&st=ykpop2lk&dl=0
+  Disponível em [PastaDropBox](https://www.dropbox.com/scl/fo/i9zaiwnmi9j8yz5vxpi0r/APH73BsF6Ns9h1xen7kPapM?rlkey=z10tnpn0ds206e29c1rz9k57m&st=ykpop2lk&dl=0)
+  
+- **Passo 1**: Faça o download do arquivo zip.
+- **Passo 2**: Entre na pasta TesteRenanTorresObjective.
+- **Passo 3**: Execute o arquivo JogoGourmetDotNetObjectiveRenan.exe.
+- **Passo 4**: Só jogar.
 
 ## Arquitetura
 ```plaintext
