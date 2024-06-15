@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoGourmetDotNetObjectiveRenan", "JogoGourmetDotNetObjectiveRenan\JogoGourmetDotNetObjectiveRenan.csproj", "{74B7047F-ABB1-43F2-9FAE-DFDFAE8E2A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{4C4CF300-E070-4D0B-AAF4-84A6C69F956F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74B7047F-ABB1-43F2-9FAE-DFDFAE8E2A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B7047F-ABB1-43F2-9FAE-DFDFAE8E2A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B7047F-ABB1-43F2-9FAE-DFDFAE8E2A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B7047F-ABB1-43F2-9FAE-DFDFAE8E2A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4CF300-E070-4D0B-AAF4-84A6C69F956F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4CF300-E070-4D0B-AAF4-84A6C69F956F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4CF300-E070-4D0B-AAF4-84A6C69F956F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4CF300-E070-4D0B-AAF4-84A6C69F956F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67765C6E-C403-4952-9F3E-5E768B55D8F3}
+	EndGlobalSection
+EndGlobal

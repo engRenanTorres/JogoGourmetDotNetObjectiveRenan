@@ -1,0 +1,72 @@
+{
+  "foodGuesses": [
+    {
+      "id": 1,
+      "name": "macarrão",
+      "tips": [ 1, 2 ]
+    },
+    {
+      "id": 2,
+      "name": "sushi",
+      "tips": [ 3, 4 ]
+    },
+    {
+      "id": 3,
+      "name": "hambúrguer",
+      "tips": [ 5, 6 ]
+    },
+    {
+      "id": 4,
+      "name": "pizza",
+      "tips": [ 7, 8 ]
+    },
+    {
+      "id": 5,
+      "name": "taco",
+      "tips": [ 9, 10 ]
+    }
+  ],
+  "tips": [
+    {
+      "id": 1,
+      "name": "pasta"
+    },
+    {
+      "id": 2,
+      "name": "origem italiana"
+    },
+    {
+      "id": 3,
+      "name": "prato japonês"
+    },
+    {
+      "id": 4,
+      "name": "feito com peixe cru"
+    },
+    {
+      "id": 5,
+      "name": "pão com carne"
+    },
+    {
+      "id": 6,
+      "name": "comida americana"
+    },
+    {
+      "id": 7,
+      "name": "massa com queijo e molho de tomate"
+    },
+    {
+      "id": 8,
+      "name": "tem variações como calabresa e marguerita"
+    },
+    {
+      "id": 9,
+      "name": "comida mexicana"
+    },
+    {
+      "id": 10,
+      "name": "tortilha recheada"
+    }
+  ]
+}
+
